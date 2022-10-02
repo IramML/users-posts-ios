@@ -38,7 +38,7 @@ struct UsersView: View {
                 
                 if let userToShow = userToShow {
                     NavigationLink(
-                        destination: Text("Item at \(userToShow.name)"),
+                        destination: PostsUserView(userId: userToShow.id),
                         isActive: $showUserPost,
                         label: {
                             EmptyView()
@@ -46,8 +46,10 @@ struct UsersView: View {
                         })
                 }
             }
+            .navigationBarTitle("Users")
             
         }
+        
     }
 
    

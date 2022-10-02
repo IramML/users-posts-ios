@@ -8,11 +8,11 @@
 import Foundation
 
 class URLSBaseRequester {
-    func baseRequest<T: Codable>(_ endpoint: URLSEndpoints, paramenters: [String: AnyObject]? = nil, completion: @escaping (T?, RemoteError?) -> Void) {
+    func baseRequest<T: Codable>(_ endpoint: URLSEndpoints, paramenters: [String: String]? = nil, completion: @escaping (T?, RemoteError?) -> Void) {
         let parameterString = stringFromHttpParameters(paramenters ?? [:])
         
         
-        let urlStr = "\(URLSConstants.baseURL)\(URLSEndpoints.users.rawValue)?\(parameterString)"
+        let urlStr = "\(URLSConstants.baseURL)\(endpoint.rawValue)?\(parameterString)"
         let url = URL(string: urlStr)
         
         let urlSession = URLSession(configuration: .default)
@@ -39,10 +39,10 @@ class URLSBaseRequester {
         }.resume()
     }
     
-    func baseRequest<T: Codable>(_ endpoint: URLSEndpoints, paramenters: [String: AnyObject]? = nil, completion: @escaping ([T]?, RemoteError?) -> Void) {
+    func baseRequest<T: Codable>(_ endpoint: URLSEndpoints, paramenters: [String: String]? = nil, completion: @escaping ([T]?, RemoteError?) -> Void) {
         let parameterString = stringFromHttpParameters(paramenters ?? [:])
         
-        let urlStr = "\(URLSConstants.baseURL)\(URLSEndpoints.users.rawValue)?\(parameterString)"
+        let urlStr = "\(URLSConstants.baseURL)\(endpoint.rawValue)?\(parameterString)"
         let url = URL(string: urlStr)
         
         
@@ -70,10 +70,11 @@ class URLSBaseRequester {
         }.resume()
     }
     
-    private func stringFromHttpParameters(_ paramenters: [String: AnyObject]) -> String {
+    private func stringFromHttpParameters(_ paramenters: [String: String]) -> String {
         let parameterArray = paramenters.map { (key, value) -> String in
-            let percentEscapedKey = stringByAddingPercentEncodingForURLQueryValue(key as! String)!
-            let percentEscapedValue = stringByAddingPercentEncodingForURLQueryValue(value as! String)!
+            let percentEscapedKey = stringByAddingPercentEncodingForURLQueryValue(key)!
+            
+            let percentEscapedValue = stringByAddingPercentEncodingForURLQueryValue(value)!
             return "\(percentEscapedKey)=\(percentEscapedValue)"
         }
         

@@ -9,4 +9,5 @@ import Foundation
 
 protocol UsersRemoteDataSource {
     func getUsers(_ completion: @escaping ([User]?, RemoteError?) -> Void)
+    func getPostsOfUser(userId: Int, _ completion: @escaping ([UserPost]?, RemoteError?) -> Void)
 }

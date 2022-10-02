@@ -17,4 +17,8 @@ class UsersRepository {
     func getUsersFromRemote(_ completion: @escaping ([User]?, RemoteError?) -> Void) {
         self.usersRemoteDataSource.getUsers(completion)
     }
+    
+    func getUserPostsBy(userId: Int, completion: @escaping ([UserPost]?, RemoteError?) -> Void) {
+        self.usersRemoteDataSource.getPostsOfUser(userId: userId, completion)
+    }
 }
