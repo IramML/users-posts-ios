@@ -16,14 +16,11 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                List {
-                    ForEach(usersViewModel.items) { item in
-                        UserView(item: item) {
-                            self.userToShow = item
-                            self.showUserPost = true
-                        }
-                    }
-                    .onDelete(perform: usersViewModel.deleteItems)
+                UsersListView(items: $usersViewModel.items) { item in
+                    userToShow = item
+                    showUserPost = true
+                } deleteItem: { offsets in
+                    usersViewModel.deleteItems(offsets: offsets)
                 }
                 
                 if let userToShow = userToShow {
