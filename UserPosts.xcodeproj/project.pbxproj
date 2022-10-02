@@ -26,7 +26,7 @@
 		FA8EBD0B28E9F67500D5FBB2 /* UsersURLSDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EBD0A28E9F67500D5FBB2 /* UsersURLSDataSource.swift */; };
 		FA8EBD0D28E9F69D00D5FBB2 /* URLSConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EBD0C28E9F69D00D5FBB2 /* URLSConstants.swift */; };
 		FA8EBD1128E9F76400D5FBB2 /* URLSEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EBD1028E9F76400D5FBB2 /* URLSEndpoints.swift */; };
-		FA8EBD1628EA043400D5FBB2 /* RemoteResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EBD1528EA043400D5FBB2 /* RemoteResult.swift */; };
+		FA8EBD1628EA043400D5FBB2 /* RemoteError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EBD1528EA043400D5FBB2 /* RemoteError.swift */; };
 		FA8EBD1828EA04EC00D5FBB2 /* URLSBaseRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EBD1728EA04EC00D5FBB2 /* URLSBaseRequester.swift */; };
 		FA8EBD1B28EA087900D5FBB2 /* GetUsersFromRemoteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EBD1A28EA087900D5FBB2 /* GetUsersFromRemoteUseCase.swift */; };
 		FA8EBD1E28EA14E100D5FBB2 /* UserItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EBD1D28EA14E100D5FBB2 /* UserItemView.swift */; };
@@ -72,7 +72,7 @@
 		FA8EBD0A28E9F67500D5FBB2 /* UsersURLSDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersURLSDataSource.swift; sourceTree = "<group>"; };
 		FA8EBD0C28E9F69D00D5FBB2 /* URLSConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSConstants.swift; sourceTree = "<group>"; };
 		FA8EBD1028E9F76400D5FBB2 /* URLSEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSEndpoints.swift; sourceTree = "<group>"; };
-		FA8EBD1528EA043400D5FBB2 /* RemoteResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteResult.swift; sourceTree = "<group>"; };
+		FA8EBD1528EA043400D5FBB2 /* RemoteError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteError.swift; sourceTree = "<group>"; };
 		FA8EBD1728EA04EC00D5FBB2 /* URLSBaseRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSBaseRequester.swift; sourceTree = "<group>"; };
 		FA8EBD1A28EA087900D5FBB2 /* GetUsersFromRemoteUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUsersFromRemoteUseCase.swift; sourceTree = "<group>"; };
 		FA8EBD1D28EA14E100D5FBB2 /* UserItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserItemView.swift; sourceTree = "<group>"; };
@@ -197,7 +197,7 @@
 			children = (
 				FA6C130F28E926DF008050D9 /* DataSource */,
 				FA6C130E28E926D8008050D9 /* Repository */,
-				FA8EBD1528EA043400D5FBB2 /* RemoteResult.swift */,
+				FA8EBD1528EA043400D5FBB2 /* RemoteError.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -440,7 +440,7 @@
 				FA8EBD0328E93E9B00D5FBB2 /* PostView.swift in Sources */,
 				FA8EBD0728E9F61300D5FBB2 /* UsersRemoteDataSource.swift in Sources */,
 				FA18A30F28E8EBBB004A9392 /* UsersView.swift in Sources */,
-				FA8EBD1628EA043400D5FBB2 /* RemoteResult.swift in Sources */,
+				FA8EBD1628EA043400D5FBB2 /* RemoteError.swift in Sources */,
 				FA8EBD1E28EA14E100D5FBB2 /* UserItemView.swift in Sources */,
 				FA6C130628E9247C008050D9 /* UsersListView.swift in Sources */,
 				FA8EBD0528E9F55500D5FBB2 /* User.swift in Sources */,

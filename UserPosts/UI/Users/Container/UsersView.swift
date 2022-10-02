@@ -8,7 +8,7 @@
 import SwiftUI
 import CoreData
 
-struct ContentView: View {
+struct UsersView: View {
     @ObservedObject var usersViewModel: UsersViewModel
 
     @State var showUserPost: Bool = false
@@ -60,8 +60,8 @@ let itemFormatter: DateFormatter = {
     return formatter
 }()
 
-struct ContentView_Previews: PreviewProvider {
+struct UsersView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        UsersView()
     }
 }
