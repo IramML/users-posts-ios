@@ -10,7 +10,6 @@ import SwiftUI
 struct UsersListView: View {
     @Binding var items: [User]
     var openItem: (_ item: User) -> Void
-    var deleteItem: (_ offsets: IndexSet) -> Void
     
     var body: some View {
         List {
@@ -19,7 +18,6 @@ struct UsersListView: View {
                     openItem(user)
                 }
             }
-            .onDelete(perform: deleteItem)
         }
 
     }
@@ -31,8 +29,6 @@ struct UsersListView_Previews: PreviewProvider {
     
     static var previews: some View {
         UsersListView(items: $items) { item in
-            
-        } deleteItem: { offsets in
             
         }
     }

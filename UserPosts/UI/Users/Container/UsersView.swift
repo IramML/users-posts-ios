@@ -30,8 +30,6 @@ struct ContentView: View {
                 UsersListView(items: $usersViewModel.items) { item in
                     userToShow = item
                     showUserPost = true
-                } deleteItem: { offsets in
-                    usersViewModel.deleteItems(offsets: offsets)
                 }
                 
                 if usersViewModel.items.count == 0 {
@@ -46,16 +44,6 @@ struct ContentView: View {
                             EmptyView()
                             
                         })
-                }
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: usersViewModel.addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
                 }
             }
             
