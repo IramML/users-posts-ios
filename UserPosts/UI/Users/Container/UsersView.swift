@@ -22,8 +22,12 @@ struct UsersView: View {
         
         let getUsersFromRemoteUseCase: GetUsersFromRemoteUseCase = GetUsersFromRemoteUseCase(usersRepository: usersRepository)
         let getUsersFromLocalUseCase: GetUsersFromLocalUseCase = GetUsersFromLocalUseCase(usersRepository: usersRepository)
+        let saveUsersToLocalUseCase: SaveUsersToLocalUseCase = SaveUsersToLocalUseCase(usersRepository: usersRepository)
       
-        self.usersViewModel = UsersViewModel(getUsersFromRemoteUseCase: getUsersFromRemoteUseCase, getUsersFromLocalUseCase: getUsersFromLocalUseCase)
+        self.usersViewModel = UsersViewModel(
+            getUsersFromRemoteUseCase: getUsersFromRemoteUseCase,
+            getUsersFromLocalUseCase: getUsersFromLocalUseCase,
+            saveUsersToLocalUseCase: saveUsersToLocalUseCase)
     }
     
     var body: some View {
