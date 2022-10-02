@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FA18A30D28E8EBBB004A9392 /* UserPostsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18A30C28E8EBBB004A9392 /* UserPostsApp.swift */; };
-		FA18A30F28E8EBBB004A9392 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18A30E28E8EBBB004A9392 /* ContentView.swift */; };
+		FA18A30F28E8EBBB004A9392 /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18A30E28E8EBBB004A9392 /* UsersView.swift */; };
 		FA18A31128E8EBC0004A9392 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA18A31028E8EBC0004A9392 /* Assets.xcassets */; };
 		FA18A31428E8EBC0004A9392 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA18A31328E8EBC0004A9392 /* Preview Assets.xcassets */; };
 		FA18A31628E8EBC0004A9392 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18A31528E8EBC0004A9392 /* Persistence.swift */; };
@@ -16,6 +16,8 @@
 		FA18A32328E8EBC0004A9392 /* UserPostsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18A32228E8EBC0004A9392 /* UserPostsTests.swift */; };
 		FA18A32D28E8EBC0004A9392 /* UserPostsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18A32C28E8EBC0004A9392 /* UserPostsUITests.swift */; };
 		FA18A32F28E8EBC0004A9392 /* UserPostsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18A32E28E8EBC0004A9392 /* UserPostsUITestsLaunchTests.swift */; };
+		FA6C130628E9247C008050D9 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C130528E9247C008050D9 /* UserView.swift */; };
+		FA8EBCFC28E930F000D5FBB2 /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EBCFB28E930F000D5FBB2 /* UsersViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +40,7 @@
 /* Begin PBXFileReference section */
 		FA18A30928E8EBBB004A9392 /* UserPosts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserPosts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA18A30C28E8EBBB004A9392 /* UserPostsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostsApp.swift; sourceTree = "<group>"; };
-		FA18A30E28E8EBBB004A9392 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FA18A30E28E8EBBB004A9392 /* UsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersView.swift; sourceTree = "<group>"; };
 		FA18A31028E8EBC0004A9392 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA18A31328E8EBC0004A9392 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FA18A31528E8EBC0004A9392 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -48,6 +50,8 @@
 		FA18A32828E8EBC0004A9392 /* UserPostsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UserPostsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA18A32C28E8EBC0004A9392 /* UserPostsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostsUITests.swift; sourceTree = "<group>"; };
 		FA18A32E28E8EBC0004A9392 /* UserPostsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FA6C130528E9247C008050D9 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		FA8EBCFB28E930F000D5FBB2 /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +102,12 @@
 		FA18A30B28E8EBBB004A9392 /* UserPosts */ = {
 			isa = PBXGroup;
 			children = (
+				FAF4B4C828E91B6B00F5F454 /* UI */,
+				FA6C130D28E926C2008050D9 /* Framework */,
+				FA6C130C28E926B5008050D9 /* Usecases */,
+				FA6C130B28E9269E008050D9 /* Domain */,
+				FA6C130A28E92699008050D9 /* Data */,
 				FA18A30C28E8EBBB004A9392 /* UserPostsApp.swift */,
-				FA18A30E28E8EBBB004A9392 /* ContentView.swift */,
 				FA18A31028E8EBC0004A9392 /* Assets.xcassets */,
 				FA18A31528E8EBC0004A9392 /* Persistence.swift */,
 				FA18A31728E8EBC0004A9392 /* UserPosts.xcdatamodeld */,
@@ -131,6 +139,100 @@
 				FA18A32E28E8EBC0004A9392 /* UserPostsUITestsLaunchTests.swift */,
 			);
 			path = UserPostsUITests;
+			sourceTree = "<group>";
+		};
+		FA6C130428E92464008050D9 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				FA6C130928E924AC008050D9 /* Container */,
+				FA6C130728E92481008050D9 /* Component */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		FA6C130728E92481008050D9 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				FA6C130528E9247C008050D9 /* UserView.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		FA6C130928E924AC008050D9 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				FA18A30E28E8EBBB004A9392 /* UsersView.swift */,
+				FA8EBCFB28E930F000D5FBB2 /* UsersViewModel.swift */,
+			);
+			path = Container;
+			sourceTree = "<group>";
+		};
+		FA6C130A28E92699008050D9 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				FA6C130F28E926DF008050D9 /* DataSource */,
+				FA6C130E28E926D8008050D9 /* Repository */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		FA6C130B28E9269E008050D9 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		FA6C130C28E926B5008050D9 /* Usecases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Usecases;
+			sourceTree = "<group>";
+		};
+		FA6C130D28E926C2008050D9 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				FA6C131028E926E8008050D9 /* URLSession */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
+		FA6C130E28E926D8008050D9 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		FA6C130F28E926DF008050D9 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		FA6C131028E926E8008050D9 /* URLSession */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = URLSession;
+			sourceTree = "<group>";
+		};
+		FA8EBCFD28E939A200D5FBB2 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		FAF4B4C828E91B6B00F5F454 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				FA8EBCFD28E939A200D5FBB2 /* Post */,
+				FA6C130428E92464008050D9 /* Users */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,7 +366,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA18A31628E8EBC0004A9392 /* Persistence.swift in Sources */,
-				FA18A30F28E8EBBB004A9392 /* ContentView.swift in Sources */,
+				FA8EBCFC28E930F000D5FBB2 /* UsersViewModel.swift in Sources */,
+				FA18A30F28E8EBBB004A9392 /* UsersView.swift in Sources */,
+				FA6C130628E9247C008050D9 /* UserView.swift in Sources */,
 				FA18A31928E8EBC0004A9392 /* UserPosts.xcdatamodeld in Sources */,
 				FA18A30D28E8EBBB004A9392 /* UserPostsApp.swift in Sources */,
 			);
