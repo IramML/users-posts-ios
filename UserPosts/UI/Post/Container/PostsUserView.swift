@@ -23,6 +23,14 @@ struct PostsUserView: View {
     var body: some View {
         ZStack {
             PostsListView(userPosts: $postsViewModel.posts)
+            
+            if !postsViewModel.isFetching && postsViewModel.posts.count == 0 {
+                Text("No posts")
+            }
+            
+            if postsViewModel.isFetching {
+                ProgressView()
+            }
         }
         .navigationBarTitle("Posts")
     }

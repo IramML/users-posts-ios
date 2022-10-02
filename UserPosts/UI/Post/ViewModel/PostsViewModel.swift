@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 class PostsViewModel: ObservableObject {
+    @Published var isFetching = false
     @Published var posts: [UserPost] = []
     private var getPostsOfUserRemoteUseCase: GetPostsOfUserRemoteUseCase
     
@@ -17,7 +18,9 @@ class PostsViewModel: ObservableObject {
     }
     
     func fetchUserPostsBy(userId: Int) {
+        self.isFetching = true
         self.getPostsOfUserRemoteUseCase.invoke(userId: userId) { [weak self] (posts, error) in
+            self?.isFetching = false
             if let _ = error {
                 self?.posts = []
             }
