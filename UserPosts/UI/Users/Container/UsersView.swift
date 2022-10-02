@@ -12,6 +12,7 @@ struct UsersView: View {
     @ObservedObject var usersViewModel: UsersViewModel
 
     @State var showUserPost: Bool = false
+    @State var textFilter: String = ""
     @State var userToShow: User? = nil
     
     init() {
@@ -33,10 +34,21 @@ struct UsersView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                UsersListView(items: $usersViewModel.items) { item in
-                    userToShow = item
-                    showUserPost = true
+                VStack {
+                    HStack {
+                        TextField("Search user", text: $textFilter)
+                            .fixedSize(horizontal: false, vertical: false)
+                            .padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
+                    }
+                    
+                    
+                    UsersListView(items: $usersViewModel.items, textFilter: $textFilter) { item in
+                        userToShow = item
+                        showUserPost = true
+                    }
                 }
+                
+                
                 
                 if !usersViewModel.isFetching && usersViewModel.items.count == 0 {
                     Text("No users")
