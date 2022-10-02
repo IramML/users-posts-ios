@@ -15,13 +15,15 @@ struct UsersView: View {
     @State var userToShow: User? = nil
     
     init() {
+        let usersLocalDatasource: UsersLocalDataSource = UsersCoreDataDataSource()
         let usersRemoteDatasource: UsersRemoteDataSource = UsersURSDataSource()
-
-        let usersRepository = UsersRepository(usersRemoteDataSource: usersRemoteDatasource)
+       
+        let usersRepository = UsersRepository(usersRemoteDataSource: usersRemoteDatasource, usersLocalDataSource: usersLocalDatasource)
         
         let getUsersFromRemoteUseCase: GetUsersFromRemoteUseCase = GetUsersFromRemoteUseCase(usersRepository: usersRepository)
+        let getUsersFromLocalUseCase: GetUsersFromLocalUseCase = GetUsersFromLocalUseCase(usersRepository: usersRepository)
       
-        self.usersViewModel = UsersViewModel(getUsersFromRemoteUseCase: getUsersFromRemoteUseCase)
+        self.usersViewModel = UsersViewModel(getUsersFromRemoteUseCase: getUsersFromRemoteUseCase, getUsersFromLocalUseCase: getUsersFromLocalUseCase)
     }
     
     var body: some View {
@@ -47,7 +49,6 @@ struct UsersView: View {
                 }
             }
             .navigationBarTitle("Users")
-            
         }
         
     }

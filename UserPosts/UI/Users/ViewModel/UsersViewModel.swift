@@ -10,14 +10,15 @@ import SwiftUI
 import CoreData
 
 class UsersViewModel: ObservableObject {
-    private var viewContext: NSManagedObjectContext
     private var getUsersFromRemoteUseCase: GetUsersFromRemoteUseCase
+    private var getUsersFromLocalUseCase: GetUsersFromLocalUseCase
 
     @Published var items: [User] = []
     
-    init(getUsersFromRemoteUseCase: GetUsersFromRemoteUseCase) {
+    init(getUsersFromRemoteUseCase: GetUsersFromRemoteUseCase, getUsersFromLocalUseCase: GetUsersFromLocalUseCase) {
         self.getUsersFromRemoteUseCase = getUsersFromRemoteUseCase
-        self.viewContext = PersistenceController.shared.container.viewContext
+        self.getUsersFromLocalUseCase = getUsersFromLocalUseCase
+        
         self.fetchData()
     }
     
@@ -32,8 +33,5 @@ class UsersViewModel: ObservableObject {
             }
             
         }
-//        let request = Item.fetchRequest()
-//        request.sortDescriptors = [NSSortDescriptor(keyPath: \Item.timestamp, ascending: false)]
-//        self.items = (try? self.viewContext.fetch(request)) ?? []
     }
 }

@@ -15,6 +15,6 @@ class GetPostsOfUserRemoteUseCase {
     }
     
     func invoke(userId: Int, completion: @escaping ([UserPost]?, RemoteError?) -> Void) {
-        self.usersRepository.getUserPostsBy(userId: userId, completion: completion)
+        self.usersRepository.getRemoteUserPostsBy(userId: userId, completion: completion)
     }
 }

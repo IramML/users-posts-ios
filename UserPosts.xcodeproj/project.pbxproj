@@ -30,6 +30,18 @@
 		FA8EBD1828EA04EC00D5FBB2 /* URLSBaseRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EBD1728EA04EC00D5FBB2 /* URLSBaseRequester.swift */; };
 		FA8EBD1B28EA087900D5FBB2 /* GetUsersFromRemoteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EBD1A28EA087900D5FBB2 /* GetUsersFromRemoteUseCase.swift */; };
 		FA8EBD1E28EA14E100D5FBB2 /* UserItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EBD1D28EA14E100D5FBB2 /* UserItemView.swift */; };
+		FA8EBD2028EA22BF00D5FBB2 /* GetPostsOfUserRemoteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EBD1F28EA22BF00D5FBB2 /* GetPostsOfUserRemoteUseCase.swift */; };
+		FA8EBD2228EA232100D5FBB2 /* UserPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EBD2128EA232100D5FBB2 /* UserPost.swift */; };
+		FA8EBD2428EA257300D5FBB2 /* PostsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EBD2328EA257300D5FBB2 /* PostsListView.swift */; };
+		FA8EBD2728EA350E00D5FBB2 /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EBD2628EA350E00D5FBB2 /* PostsViewModel.swift */; };
+		FA8EBD2B28EA3CEE00D5FBB2 /* UsersLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EBD2A28EA3CEE00D5FBB2 /* UsersLocalDataSource.swift */; };
+		FA8EBD2D28EA3D4C00D5FBB2 /* UsersCoreDataDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EBD2C28EA3D4C00D5FBB2 /* UsersCoreDataDataSource.swift */; };
+		FA8EBD3A28EA40F400D5FBB2 /* UserCD+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EBD3828EA40F400D5FBB2 /* UserCD+CoreDataClass.swift */; };
+		FA8EBD3E28EA420100D5FBB2 /* UserAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EBD3D28EA420100D5FBB2 /* UserAdapter.swift */; };
+		FA8EBD4228EA428C00D5FBB2 /* UserCD+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EBD4128EA428C00D5FBB2 /* UserCD+CoreDataProperties.swift */; };
+		FA8EBD4428EA43B200D5FBB2 /* LocalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EBD4328EA43B200D5FBB2 /* LocalError.swift */; };
+		FA8EBD4628EA475500D5FBB2 /* GetUsersFromLocalUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EBD4528EA475500D5FBB2 /* GetUsersFromLocalUseCase.swift */; };
+		FA8EBD4828EA486800D5FBB2 /* SaveUsersToLocalUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EBD4728EA486800D5FBB2 /* SaveUsersToLocalUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +88,18 @@
 		FA8EBD1728EA04EC00D5FBB2 /* URLSBaseRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSBaseRequester.swift; sourceTree = "<group>"; };
 		FA8EBD1A28EA087900D5FBB2 /* GetUsersFromRemoteUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUsersFromRemoteUseCase.swift; sourceTree = "<group>"; };
 		FA8EBD1D28EA14E100D5FBB2 /* UserItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserItemView.swift; sourceTree = "<group>"; };
+		FA8EBD1F28EA22BF00D5FBB2 /* GetPostsOfUserRemoteUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPostsOfUserRemoteUseCase.swift; sourceTree = "<group>"; };
+		FA8EBD2128EA232100D5FBB2 /* UserPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPost.swift; sourceTree = "<group>"; };
+		FA8EBD2328EA257300D5FBB2 /* PostsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListView.swift; sourceTree = "<group>"; };
+		FA8EBD2628EA350E00D5FBB2 /* PostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModel.swift; sourceTree = "<group>"; };
+		FA8EBD2A28EA3CEE00D5FBB2 /* UsersLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersLocalDataSource.swift; sourceTree = "<group>"; };
+		FA8EBD2C28EA3D4C00D5FBB2 /* UsersCoreDataDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersCoreDataDataSource.swift; sourceTree = "<group>"; };
+		FA8EBD3828EA40F400D5FBB2 /* UserCD+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserCD+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FA8EBD3D28EA420100D5FBB2 /* UserAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAdapter.swift; sourceTree = "<group>"; };
+		FA8EBD4128EA428C00D5FBB2 /* UserCD+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserCD+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FA8EBD4328EA43B200D5FBB2 /* LocalError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalError.swift; sourceTree = "<group>"; };
+		FA8EBD4528EA475500D5FBB2 /* GetUsersFromLocalUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUsersFromLocalUseCase.swift; sourceTree = "<group>"; };
+		FA8EBD4728EA486800D5FBB2 /* SaveUsersToLocalUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveUsersToLocalUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +222,7 @@
 				FA6C130F28E926DF008050D9 /* DataSource */,
 				FA6C130E28E926D8008050D9 /* Repository */,
 				FA8EBD1528EA043400D5FBB2 /* RemoteError.swift */,
+				FA8EBD4328EA43B200D5FBB2 /* LocalError.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -206,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				FA8EBD0428E9F55500D5FBB2 /* User.swift */,
+				FA8EBD2128EA232100D5FBB2 /* UserPost.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -214,6 +240,9 @@
 			isa = PBXGroup;
 			children = (
 				FA8EBD1A28EA087900D5FBB2 /* GetUsersFromRemoteUseCase.swift */,
+				FA8EBD1F28EA22BF00D5FBB2 /* GetPostsOfUserRemoteUseCase.swift */,
+				FA8EBD4528EA475500D5FBB2 /* GetUsersFromLocalUseCase.swift */,
+				FA8EBD4728EA486800D5FBB2 /* SaveUsersToLocalUseCase.swift */,
 			);
 			path = Usecases;
 			sourceTree = "<group>";
@@ -221,6 +250,7 @@
 		FA6C130D28E926C2008050D9 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				FA8EBD2828EA3CC100D5FBB2 /* CoreData */,
 				FA6C131028E926E8008050D9 /* URLSession */,
 			);
 			path = Framework;
@@ -238,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				FA8EBD0628E9F61300D5FBB2 /* UsersRemoteDataSource.swift */,
+				FA8EBD2A28EA3CEE00D5FBB2 /* UsersLocalDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -256,6 +287,7 @@
 		FA8EBCFD28E939A200D5FBB2 /* Post */ = {
 			isa = PBXGroup;
 			children = (
+				FA8EBD2528EA34F200D5FBB2 /* ViewModel */,
 				FA8EBCFF28E93E5F00D5FBB2 /* Container */,
 				FA8EBCFE28E93E5800D5FBB2 /* Component */,
 			);
@@ -266,6 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				FA8EBD0228E93E9B00D5FBB2 /* PostView.swift */,
+				FA8EBD2328EA257300D5FBB2 /* PostsListView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -292,6 +325,49 @@
 				FA8EBCFB28E930F000D5FBB2 /* UsersViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FA8EBD2528EA34F200D5FBB2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA8EBD2628EA350E00D5FBB2 /* PostsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FA8EBD2828EA3CC100D5FBB2 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				FA8EBD3C28EA412B00D5FBB2 /* Adapter */,
+				FA8EBD3328EA404200D5FBB2 /* Domain */,
+				FA8EBD2928EA3CD800D5FBB2 /* Data */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		FA8EBD2928EA3CD800D5FBB2 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				FA8EBD2C28EA3D4C00D5FBB2 /* UsersCoreDataDataSource.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		FA8EBD3328EA404200D5FBB2 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				FA8EBD3828EA40F400D5FBB2 /* UserCD+CoreDataClass.swift */,
+				FA8EBD4128EA428C00D5FBB2 /* UserCD+CoreDataProperties.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		FA8EBD3C28EA412B00D5FBB2 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				FA8EBD3D28EA420100D5FBB2 /* UserAdapter.swift */,
+			);
+			path = Adapter;
 			sourceTree = "<group>";
 		};
 		FAF4B4C828E91B6B00F5F454 /* UI */ = {
@@ -433,21 +509,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA8EBD4628EA475500D5FBB2 /* GetUsersFromLocalUseCase.swift in Sources */,
+				FA8EBD4428EA43B200D5FBB2 /* LocalError.swift in Sources */,
+				FA8EBD2B28EA3CEE00D5FBB2 /* UsersLocalDataSource.swift in Sources */,
+				FA8EBD3A28EA40F400D5FBB2 /* UserCD+CoreDataClass.swift in Sources */,
+				FA8EBD2028EA22BF00D5FBB2 /* GetPostsOfUserRemoteUseCase.swift in Sources */,
 				FA18A31628E8EBC0004A9392 /* Persistence.swift in Sources */,
 				FA8EBD1128E9F76400D5FBB2 /* URLSEndpoints.swift in Sources */,
 				FA8EBCFC28E930F000D5FBB2 /* UsersViewModel.swift in Sources */,
 				FA8EBD0B28E9F67500D5FBB2 /* UsersURLSDataSource.swift in Sources */,
+				FA8EBD3E28EA420100D5FBB2 /* UserAdapter.swift in Sources */,
 				FA8EBD0328E93E9B00D5FBB2 /* PostView.swift in Sources */,
 				FA8EBD0728E9F61300D5FBB2 /* UsersRemoteDataSource.swift in Sources */,
 				FA18A30F28E8EBBB004A9392 /* UsersView.swift in Sources */,
 				FA8EBD1628EA043400D5FBB2 /* RemoteError.swift in Sources */,
+				FA8EBD4828EA486800D5FBB2 /* SaveUsersToLocalUseCase.swift in Sources */,
 				FA8EBD1E28EA14E100D5FBB2 /* UserItemView.swift in Sources */,
 				FA6C130628E9247C008050D9 /* UsersListView.swift in Sources */,
 				FA8EBD0528E9F55500D5FBB2 /* User.swift in Sources */,
 				FA18A31928E8EBC0004A9392 /* UserPosts.xcdatamodeld in Sources */,
 				FA8EBD1B28EA087900D5FBB2 /* GetUsersFromRemoteUseCase.swift in Sources */,
+				FA8EBD2428EA257300D5FBB2 /* PostsListView.swift in Sources */,
+				FA8EBD2D28EA3D4C00D5FBB2 /* UsersCoreDataDataSource.swift in Sources */,
+				FA8EBD2228EA232100D5FBB2 /* UserPost.swift in Sources */,
 				FA8EBD1828EA04EC00D5FBB2 /* URLSBaseRequester.swift in Sources */,
 				FA8EBD0D28E9F69D00D5FBB2 /* URLSConstants.swift in Sources */,
+				FA8EBD4228EA428C00D5FBB2 /* UserCD+CoreDataProperties.swift in Sources */,
+				FA8EBD2728EA350E00D5FBB2 /* PostsViewModel.swift in Sources */,
 				FA18A30D28E8EBBB004A9392 /* UserPostsApp.swift in Sources */,
 				FA8EBD0928E9F63000D5FBB2 /* UsersRepository.swift in Sources */,
 				FA8EBD0128E93E9000D5FBB2 /* PostsUserView.swift in Sources */,

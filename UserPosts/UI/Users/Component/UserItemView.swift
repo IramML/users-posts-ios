@@ -48,7 +48,7 @@ struct UserItemView: View {
 }
 
 struct UserItemView_Previews: PreviewProvider {
-    private static let user = User(id: 1, name: "Leanne Graham", username: "Bret", email: "Sincere@april.biz", address: UserAddress(street: "Kulas Light", suite: "Apt. 556", city: "Gwenborough", zipcode: "92998-3874", geo: GeoLatLng(lat: "-37.3159", lng: "81.1496")), phone: "1-770-736-8031 x56442", website: "hildegard.org", company: UserCompany(name: "Romaguera-Crona", catchPhrase: "Multi-layered client-server neural-net", bs: "harness real-time e-markets"))
+    private static let user = User(id: 1, name: "Leanne Graham", username: "Bret", email: "Sincere@april.biz", phone: "1-770-736-8031 x56442")
     static var previews: some View {
         UserItemView(user: user) {_ in
             

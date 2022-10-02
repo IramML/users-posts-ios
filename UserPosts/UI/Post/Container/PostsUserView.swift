@@ -11,8 +11,9 @@ struct PostsUserView: View {
     @ObservedObject var postsViewModel: PostsViewModel
     
     init(userId: Int) {
+        let usersLocalDataSouce: UsersLocalDataSource = UsersCoreDataDataSource()
         let usersRemoteDataSouce: UsersRemoteDataSource = UsersURSDataSource()
-        let usersRepository: UsersRepository = UsersRepository(usersRemoteDataSource: usersRemoteDataSouce)
+        let usersRepository: UsersRepository = UsersRepository(usersRemoteDataSource: usersRemoteDataSouce, usersLocalDataSource: usersLocalDataSouce)
         let getPostsOfUserRemoteUseCase = GetPostsOfUserRemoteUseCase(usersRepository: usersRepository)
         
         self.postsViewModel = PostsViewModel(getPostsOfUserRemoteUseCase: getPostsOfUserRemoteUseCase)
