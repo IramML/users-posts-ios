@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct User: Codable {
+struct User: Codable, Identifiable {
     var id: Int
     var name: String
     var username: String
@@ -27,8 +27,8 @@ struct UserAddress: Codable {
 }
 
 struct GeoLatLng: Codable {
-    var lat: Double
-    var lng: Double
+    var lat: String
+    var lng: String
 }
 
 struct UserCompany: Codable {

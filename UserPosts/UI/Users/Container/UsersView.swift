@@ -9,9 +9,20 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    @ObservedObject var usersViewModel = UsersViewModel()
+    @ObservedObject var usersViewModel: UsersViewModel
+
     @State var showUserPost: Bool = false
-    @State var userToShow: Item? = nil
+    @State var userToShow: User? = nil
+    
+    init() {
+        let usersRemoteDatasource: UsersRemoteDataSource = UsersURSDataSource()
+
+        let usersRepository = UsersRepository(usersRemoteDataSource: usersRemoteDatasource)
+        
+        let getUsersFromRemoteUseCase: GetUsersFromRemoteUseCase = GetUsersFromRemoteUseCase(usersRepository: usersRepository)
+      
+        self.usersViewModel = UsersViewModel(getUsersFromRemoteUseCase: getUsersFromRemoteUseCase)
+    }
     
     var body: some View {
         NavigationView {
@@ -29,7 +40,7 @@ struct ContentView: View {
                 
                 if let userToShow = userToShow {
                     NavigationLink(
-                        destination: Text("Item at \(userToShow.timestamp!, formatter: itemFormatter)"),
+                        destination: Text("Item at \(userToShow.name)"),
                         isActive: $showUserPost,
                         label: {
                             EmptyView()
