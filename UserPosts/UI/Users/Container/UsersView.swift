@@ -10,7 +10,7 @@ import CoreData
 
 struct ContentView: View {
     @ObservedObject var usersViewModel = UsersViewModel()
-    @State var showUserPost = false
+    @State var showUserPost: Bool = false
     @State var userToShow: Item? = nil
     
     var body: some View {
