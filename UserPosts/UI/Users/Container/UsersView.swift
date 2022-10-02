@@ -23,6 +23,10 @@ struct ContentView: View {
                     usersViewModel.deleteItems(offsets: offsets)
                 }
                 
+                if usersViewModel.items.count == 0 {
+                    Text("No users")
+                }
+                
                 if let userToShow = userToShow {
                     NavigationLink(
                         destination: Text("Item at \(userToShow.timestamp!, formatter: itemFormatter)"),
@@ -43,7 +47,7 @@ struct ContentView: View {
                     }
                 }
             }
-            Text("Select an item")
+            
         }
     }
 
