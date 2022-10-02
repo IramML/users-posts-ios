@@ -13,6 +13,7 @@ class UsersViewModel: ObservableObject {
     private var getUsersFromRemoteUseCase: GetUsersFromRemoteUseCase
     private var getUsersFromLocalUseCase: GetUsersFromLocalUseCase
 
+    @Published var isFetching = false
     @Published var items: [User] = []
     
     init(getUsersFromRemoteUseCase: GetUsersFromRemoteUseCase, getUsersFromLocalUseCase: GetUsersFromLocalUseCase) {
@@ -23,7 +24,9 @@ class UsersViewModel: ObservableObject {
     }
     
     func fetchData() {
+        self.isFetching = true
         getUsersFromRemoteUseCase.invoke { [weak self] (users, error) in
+            self?.isFetching = false
             if let _ = error {
                 self?.items = []
             }

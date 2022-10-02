@@ -34,8 +34,12 @@ struct UsersView: View {
                     showUserPost = true
                 }
                 
-                if usersViewModel.items.count == 0 {
+                if !usersViewModel.isFetching && usersViewModel.items.count == 0 {
                     Text("No users")
+                }
+                
+                if usersViewModel.isFetching {
+                    ProgressView()
                 }
                 
                 if let userToShow = userToShow {
