@@ -20,6 +20,15 @@
 		FA8EBCFC28E930F000D5FBB2 /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EBCFB28E930F000D5FBB2 /* UsersViewModel.swift */; };
 		FA8EBD0128E93E9000D5FBB2 /* PostsUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EBD0028E93E9000D5FBB2 /* PostsUserView.swift */; };
 		FA8EBD0328E93E9B00D5FBB2 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EBD0228E93E9B00D5FBB2 /* PostView.swift */; };
+		FA8EBD0528E9F55500D5FBB2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EBD0428E9F55500D5FBB2 /* User.swift */; };
+		FA8EBD0728E9F61300D5FBB2 /* UsersRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EBD0628E9F61300D5FBB2 /* UsersRemoteDataSource.swift */; };
+		FA8EBD0928E9F63000D5FBB2 /* UsersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EBD0828E9F63000D5FBB2 /* UsersRepository.swift */; };
+		FA8EBD0B28E9F67500D5FBB2 /* UsersURLSDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EBD0A28E9F67500D5FBB2 /* UsersURLSDataSource.swift */; };
+		FA8EBD0D28E9F69D00D5FBB2 /* URLSConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EBD0C28E9F69D00D5FBB2 /* URLSConstants.swift */; };
+		FA8EBD1128E9F76400D5FBB2 /* URLSEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EBD1028E9F76400D5FBB2 /* URLSEndpoints.swift */; };
+		FA8EBD1628EA043400D5FBB2 /* RemoteResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EBD1528EA043400D5FBB2 /* RemoteResult.swift */; };
+		FA8EBD1828EA04EC00D5FBB2 /* URLSBaseRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EBD1728EA04EC00D5FBB2 /* URLSBaseRequester.swift */; };
+		FA8EBD1B28EA087900D5FBB2 /* GetUsersFromRemoteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EBD1A28EA087900D5FBB2 /* GetUsersFromRemoteUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +65,15 @@
 		FA8EBCFB28E930F000D5FBB2 /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
 		FA8EBD0028E93E9000D5FBB2 /* PostsUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsUserView.swift; sourceTree = "<group>"; };
 		FA8EBD0228E93E9B00D5FBB2 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		FA8EBD0428E9F55500D5FBB2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FA8EBD0628E9F61300D5FBB2 /* UsersRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRemoteDataSource.swift; sourceTree = "<group>"; };
+		FA8EBD0828E9F63000D5FBB2 /* UsersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRepository.swift; sourceTree = "<group>"; };
+		FA8EBD0A28E9F67500D5FBB2 /* UsersURLSDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersURLSDataSource.swift; sourceTree = "<group>"; };
+		FA8EBD0C28E9F69D00D5FBB2 /* URLSConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSConstants.swift; sourceTree = "<group>"; };
+		FA8EBD1028E9F76400D5FBB2 /* URLSEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSEndpoints.swift; sourceTree = "<group>"; };
+		FA8EBD1528EA043400D5FBB2 /* RemoteResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteResult.swift; sourceTree = "<group>"; };
+		FA8EBD1728EA04EC00D5FBB2 /* URLSBaseRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSBaseRequester.swift; sourceTree = "<group>"; };
+		FA8EBD1A28EA087900D5FBB2 /* GetUsersFromRemoteUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUsersFromRemoteUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +166,7 @@
 		FA6C130428E92464008050D9 /* Users */ = {
 			isa = PBXGroup;
 			children = (
+				FA8EBD1C28EA094B00D5FBB2 /* ViewModel */,
 				FA6C130928E924AC008050D9 /* Container */,
 				FA6C130728E92481008050D9 /* Component */,
 			);
@@ -166,7 +185,6 @@
 			isa = PBXGroup;
 			children = (
 				FA18A30E28E8EBBB004A9392 /* UsersView.swift */,
-				FA8EBCFB28E930F000D5FBB2 /* UsersViewModel.swift */,
 			);
 			path = Container;
 			sourceTree = "<group>";
@@ -176,6 +194,7 @@
 			children = (
 				FA6C130F28E926DF008050D9 /* DataSource */,
 				FA6C130E28E926D8008050D9 /* Repository */,
+				FA8EBD1528EA043400D5FBB2 /* RemoteResult.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -183,6 +202,7 @@
 		FA6C130B28E9269E008050D9 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				FA8EBD0428E9F55500D5FBB2 /* User.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -190,6 +210,7 @@
 		FA6C130C28E926B5008050D9 /* Usecases */ = {
 			isa = PBXGroup;
 			children = (
+				FA8EBD1A28EA087900D5FBB2 /* GetUsersFromRemoteUseCase.swift */,
 			);
 			path = Usecases;
 			sourceTree = "<group>";
@@ -205,6 +226,7 @@
 		FA6C130E28E926D8008050D9 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				FA8EBD0828E9F63000D5FBB2 /* UsersRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -212,6 +234,7 @@
 		FA6C130F28E926DF008050D9 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				FA8EBD0628E9F61300D5FBB2 /* UsersRemoteDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -219,6 +242,10 @@
 		FA6C131028E926E8008050D9 /* URLSession */ = {
 			isa = PBXGroup;
 			children = (
+				FA8EBD1428E9F8C400D5FBB2 /* Data */,
+				FA8EBD0C28E9F69D00D5FBB2 /* URLSConstants.swift */,
+				FA8EBD1028E9F76400D5FBB2 /* URLSEndpoints.swift */,
+				FA8EBD1728EA04EC00D5FBB2 /* URLSBaseRequester.swift */,
 			);
 			path = URLSession;
 			sourceTree = "<group>";
@@ -246,6 +273,22 @@
 				FA8EBD0028E93E9000D5FBB2 /* PostsUserView.swift */,
 			);
 			path = Container;
+			sourceTree = "<group>";
+		};
+		FA8EBD1428E9F8C400D5FBB2 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				FA8EBD0A28E9F67500D5FBB2 /* UsersURLSDataSource.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		FA8EBD1C28EA094B00D5FBB2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA8EBCFB28E930F000D5FBB2 /* UsersViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		FAF4B4C828E91B6B00F5F454 /* UI */ = {
@@ -388,12 +431,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA18A31628E8EBC0004A9392 /* Persistence.swift in Sources */,
+				FA8EBD1128E9F76400D5FBB2 /* URLSEndpoints.swift in Sources */,
 				FA8EBCFC28E930F000D5FBB2 /* UsersViewModel.swift in Sources */,
+				FA8EBD0B28E9F67500D5FBB2 /* UsersURLSDataSource.swift in Sources */,
 				FA8EBD0328E93E9B00D5FBB2 /* PostView.swift in Sources */,
+				FA8EBD0728E9F61300D5FBB2 /* UsersRemoteDataSource.swift in Sources */,
 				FA18A30F28E8EBBB004A9392 /* UsersView.swift in Sources */,
+				FA8EBD1628EA043400D5FBB2 /* RemoteResult.swift in Sources */,
 				FA6C130628E9247C008050D9 /* UsersListView.swift in Sources */,
+				FA8EBD0528E9F55500D5FBB2 /* User.swift in Sources */,
 				FA18A31928E8EBC0004A9392 /* UserPosts.xcdatamodeld in Sources */,
+				FA8EBD1B28EA087900D5FBB2 /* GetUsersFromRemoteUseCase.swift in Sources */,
+				FA8EBD1828EA04EC00D5FBB2 /* URLSBaseRequester.swift in Sources */,
+				FA8EBD0D28E9F69D00D5FBB2 /* URLSConstants.swift in Sources */,
 				FA18A30D28E8EBBB004A9392 /* UserPostsApp.swift in Sources */,
+				FA8EBD0928E9F63000D5FBB2 /* UsersRepository.swift in Sources */,
 				FA8EBD0128E93E9000D5FBB2 /* PostsUserView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
