@@ -1,4 +1,4 @@
-# Calculator
+# Users posts
 ![License](https://img.shields.io/github/license/iramml/users-posts-ios)
 ![Stars](https://img.shields.io/github/stars/iramml/users-posts-ios?style=social)
 ![Twitter URL](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2FIramML_)
