@@ -70,6 +70,7 @@ struct UsersView: View {
             }
             .navigationBarTitle("Users")
         }
+        .navigationViewStyle(StackNavigationViewStyle())
         
     }
 
