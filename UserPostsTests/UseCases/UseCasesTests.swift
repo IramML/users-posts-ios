@@ -19,7 +19,7 @@ final class UseCasesTests: XCTestCase {
     }
     
     func test_getUsersFromRemoteUseCase() {
-        let (remoteDS, localDs, repository) = self.setupFakeDatasourcesAndUsersRepository()
+        let (remoteDS, _, repository) = self.setupFakeDatasourcesAndUsersRepository()
         let getUsersFromRemoteUseCase = GetUsersFromRemoteUseCase(usersRepository: repository)
         
         getUsersFromRemoteUseCase.invoke { users, error in
@@ -33,7 +33,7 @@ final class UseCasesTests: XCTestCase {
     }
     
     func test_getPostsOfUserRemoteUseCase() {
-        let (remoteDS, localDs, repository) = self.setupFakeDatasourcesAndUsersRepository()
+        let (remoteDS, _, repository) = self.setupFakeDatasourcesAndUsersRepository()
         let getPostsOfUserRemoteUseCase = GetPostsOfUserRemoteUseCase(usersRepository: repository)
         
         getPostsOfUserRemoteUseCase.invoke(userId: 1) { posts, error in
@@ -47,7 +47,7 @@ final class UseCasesTests: XCTestCase {
     }
     
     func test_getUsersFromLocalUseCase() {
-        let (remoteDS, localDs, repository) = self.setupFakeDatasourcesAndUsersRepository()
+        let (_, localDs, repository) = self.setupFakeDatasourcesAndUsersRepository()
         let getUsersFromLocalUseCase = GetUsersFromLocalUseCase(usersRepository: repository)
         
         getUsersFromLocalUseCase.invoke { users, error in
@@ -61,7 +61,7 @@ final class UseCasesTests: XCTestCase {
     }
     
     func test_saveUsersToLocalUseCase() {
-        let (remoteDS, localDs, repository) = self.setupFakeDatasourcesAndUsersRepository()
+        let (_, localDs, repository) = self.setupFakeDatasourcesAndUsersRepository()
         let saveUsersToLocalUseCase = SaveUsersToLocalUseCase(usersRepository: repository)
         
         XCTAssertTrue(saveUsersToLocalUseCase.invoke([]))
@@ -69,8 +69,6 @@ final class UseCasesTests: XCTestCase {
         XCTAssertTrue(localDs.getUsersCountCalls == 0)
         XCTAssertTrue(localDs.saveUsersCountCalls > 0)
     }
-    
-    
     
     func setupFakeDatasourcesAndUsersRepository() -> (remoteDS: UsersURLSDataSourceFake, localDs: UsersLocalDataSourceFake, repository: UsersRepository) {
         let fakeRemoteDataSource = UsersURLSDataSourceFake()

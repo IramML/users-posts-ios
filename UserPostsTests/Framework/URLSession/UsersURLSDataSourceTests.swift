@@ -115,13 +115,21 @@ class UsersURLSDataSourceFake: UsersRemoteDataSource {
 class UsersLocalDataSourceFake: UsersLocalDataSource {
     var getUsersCountCalls: Int = 0
     var saveUsersCountCalls: Int = 0
+    var shouldReturnEmptyUsers = false
     
     func getUsers(_ completion: @escaping ([UserPosts.User], UserPosts.LocalError?) -> Void) {
         getUsersCountCalls += 1
         let user1 = User(id: 1, name: "", username: "", email: "", phone: "")
         var user2 = user1
         user2.id = 2
-        completion([user1, user2], nil)
+        var user3 = user1
+        user3.id = 3
+        if shouldReturnEmptyUsers {
+            completion([], nil)
+        } else {
+            completion([user1, user2, user3], nil)
+        }
+        
     }
     
     func saveUsers(_ users: [UserPosts.User]) -> Bool {
