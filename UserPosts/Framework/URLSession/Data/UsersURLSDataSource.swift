@@ -7,7 +7,7 @@
 
 import Foundation
 
-class UsersURSDataSource: URLSBaseRequester, UsersRemoteDataSource {
+class UsersURLSDataSource: URLSBaseRequester, UsersRemoteDataSource {
     
     func getPostsOfUser(userId: Int, _ completion: @escaping ([UserPost]?, RemoteError?) -> Void) {
         let params: [String: String] = ["userId": String(userId)]

@@ -12,7 +12,7 @@ struct PostsUserView: View {
     
     init(userId: Int) {
         let usersLocalDataSouce: UsersLocalDataSource = UsersCoreDataDataSource()
-        let usersRemoteDataSouce: UsersRemoteDataSource = UsersURSDataSource()
+        let usersRemoteDataSouce: UsersRemoteDataSource = UsersURLSDataSource()
         let usersRepository: UsersRepository = UsersRepository(usersRemoteDataSource: usersRemoteDataSouce, usersLocalDataSource: usersLocalDataSouce)
         let getPostsOfUserRemoteUseCase = GetPostsOfUserRemoteUseCase(usersRepository: usersRepository)
         

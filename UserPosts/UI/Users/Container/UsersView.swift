@@ -17,7 +17,7 @@ struct UsersView: View {
     
     init() {
         let usersLocalDatasource: UsersLocalDataSource = UsersCoreDataDataSource()
-        let usersRemoteDatasource: UsersRemoteDataSource = UsersURSDataSource()
+        let usersRemoteDatasource: UsersRemoteDataSource = UsersURLSDataSource()
        
         let usersRepository = UsersRepository(usersRemoteDataSource: usersRemoteDatasource, usersLocalDataSource: usersLocalDatasource)
         
